@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <!-- Bootstrap CSS -->
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Register Student</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <!-- Bootstrap JavaScript (Optional) -->
+    
+    <!-- Your custom JavaScript to initialize the dropdown (Optional) -->
+    <script>
+        // Example JavaScript to initialize the dropdown
+        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+            return new bootstrap.Dropdown(dropdownToggleEl);
+        });
+    </script>
+</body>
+</html>
