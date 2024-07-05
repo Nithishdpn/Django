@@ -1,5 +1,5 @@
 from django import forms
-from .models import Student, Course
+from .models import Student, Course  # Use capitalized model names
 
 class StudentForm(forms.ModelForm):
     class Meta:
@@ -9,14 +9,14 @@ class StudentForm(forms.ModelForm):
             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
-            'courses': forms.SelectMultiple(attrs={'class': 'form-select', 'data-toggle':'dropdown'}),
- }
+            'courses': forms.SelectMultiple(attrs={'class': 'form-select', 'data-toggle': 'dropdown'}),
+        }
         
 class CourseForm(forms.ModelForm):
     class Meta:
-        model = Course
+        model = Course  # Correct reference to Course
         fields = ['name', 'description']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
- }
+        }

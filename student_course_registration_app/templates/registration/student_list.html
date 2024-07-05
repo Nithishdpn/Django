@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
     <h1>Students Registered for {{ course.name }}</h1>
-    <ul>
+    <ul class="list-group">
         {% for student in students %}
-            <li>{{ student.first_name }} {{ student.last_name }}</li>
+            <li class="list-group-item">{{ student.first_name }} {{ student.last_name }}</li>
         {% endfor %}
     </ul>
+</div>
 {% endblock %}
